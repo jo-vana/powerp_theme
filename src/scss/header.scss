@@ -1,0 +1,122 @@
+// Header style
+$primary-color: #00A9BD;
+.header {
+    position: relative;
+    z-index: 100;
+    background-color: transparent;
+    .light-logo {
+        display: block;
+    }
+    .logo {
+        display: none;
+    }
+    // Fixed header styles
+    &.scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        background-color: #fff;
+        .light-logo {
+            display: none;
+        }
+        .logo {
+            display: block;
+        }
+        .main-menu {
+            li {
+                a.nav-link {
+                    color: $primary-color;
+                }
+            }
+        }
+        .language-menu {
+            li {
+                a.nav-link {
+                    color: $primary-color;
+                    &.active {
+                        color: $primary-color;
+                        &::after {
+                            background-color: $primary-color;
+                        }
+                    }
+                    &::after {
+                        background-color: $primary-color;
+                    }
+                    
+                }
+            }
+        }
+    } // END Fixed header styles
+    .main-menu {
+        li {
+            a.nav-link {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .language-menu {
+        li {
+            position: relative;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            a.nav-link {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 70px;
+                &.active {
+                    text-decoration: none;
+                    color: #fff;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 65%;
+                        height: 2px !important;
+                        width: 40%;
+                        left: 30%;
+                        background-color: #fff;
+                        transition: 0.4s ease-out all .1s;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 90%;
+                            left: 5%;
+                            transition: 0.5s ease all;
+                        }
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 65%;
+                    height: 2px !important;
+                    width: 0;
+                    left: 50%;
+                    background-color: #fff;
+                    transition: 0.4s ease-out all .1s;
+                }
+                &:hover {
+                    &::after {
+                        width: 90%;
+                        left: 5%;
+                        transition: 0.5s ease all;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.logo {
+    max-width: 198px;
+}

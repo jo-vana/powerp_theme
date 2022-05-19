@@ -1,0 +1,200 @@
+$primary-color: #00A9BD;
+$secondary-color: #58595B;
+$light-secondary-color: #787A7D;
+.about-section--one {
+    min-height: 580px;
+    padding-bottom: 80px;
+    background-color: $secondary-color;
+    position: relative;
+    top: -134px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    &::after {
+        content: url('../background/Vector.svg');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+    }
+    p {
+        color: #fff;
+        font-size: calc(18px + (24 - 18) * ((100vw - 420px) / (2600 - 420)));
+        line-height: 1.8;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+.arrow {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    cursor: pointer;
+    animation: bounce 0.6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 10px, 0); }
+}
+.about-section--two {
+    position: relative;
+    top: -207px;
+    min-height: 465px;
+    background-image: url('../background/bg_section3.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    p {
+        color: #fff;
+        font-size: calc(22px + (40 - 22) * ((100vw - 420px) / (2600 - 420)));
+        line-height: 1.8;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+.about-section--three {
+    position: relative;
+    top: -100px;
+    h3 {
+        font-size: calc(28px + (44 - 28) * ((100vw - 420px) / (2600 - 420)));
+        line-height: 1.8;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            color: $light-secondary-color;
+            font-size: calc(18px + (22 - 18) * ((100vw - 420px) / (2600 - 420)));
+            line-height: 1.8;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 80px;
+        }
+    }
+    h2 {
+        font-size: calc(30px + (50 - 30) * ((100vw - 420px) / (2600 - 420)));
+        line-height: 1.8;
+        font-weight: 700;
+        text-align: center;
+        color: $secondary-color;
+        margin-top: 50px;
+    }
+}
+.about-us-section {
+    &.row {
+        margin: 0;
+        div[class*=col-] {
+            padding: 0;
+        }
+    }
+    div[class*=col-] {
+        padding: 0;
+    }
+    div[class*=col-] {
+        .row {
+            margin: 0;
+            .col {
+                padding: 0;
+            }
+        }
+    }
+    .eampty {
+        &.blue-box {
+            background-color: $primary-color;
+            position: relative;
+            &::after {
+                content: url('../background/Vector.svg');
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: -20%;
+                z-index: 10;
+            }
+        }
+        &.gray-box {
+            background-color: $light-secondary-color;
+            position: relative;
+            &::after {
+                content: url('../background/Vector.svg');
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: -20%;
+                z-index: 10;
+            }
+        }
+    }
+    .with-img {
+        min-height: 510px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 50;
+        &.left {
+            background-image: url('../public/about-left.png');
+            &::after {
+                content: url('../public/stamp.png');
+                display: block;
+                position: absolute;
+                top: -20px;
+                right: -30px;
+                z-index: 10;
+            }
+        }
+        &.right {
+            background-image: url('../public/about-right.png');
+            &::after {
+                content: url('../public/stamp.png');
+                display: block;
+                position: absolute;
+                bottom: -30px;
+                left: -30px;
+                z-index: 10;
+            }
+        }
+    }
+    .box {
+        min-height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.blue {
+            background-color: $primary-color; 
+        }
+        &.dark-gray {
+            background-color: $secondary-color;
+        }
+        &.light-gray {
+            background-color: $light-secondary-color;
+        }
+        p {
+            color: #fff;
+            font-size: calc(18px + (24 - 18) * ((100vw - 420px) / (2600 - 420)));
+            line-height: 1.8;
+            font-weight: 400;
+            text-align: center;
+            display: block;
+            max-width: 620px;
+        }
+    }
+}
+.partners {
+    background-color: $primary-color;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    h2 {
+        font-size: calc(30px + (52 - 30) * ((100vw - 420px) / (2600 - 420)));
+        line-height: 1.8;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+    }
+}

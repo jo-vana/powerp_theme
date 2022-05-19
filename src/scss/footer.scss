@@ -1,0 +1,38 @@
+$primary-color: #00A9BD;
+$secondary-color: #58595B;
+$dark-color: #3C444C;
+footer {
+    background-color: $secondary-color;
+    .footer-bottom {
+        background-color: $dark-color;
+        span {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+.contact-form {
+    .row {
+        padding-bottom: 10px;
+    }
+    input, textarea {
+        display: block;
+        outline: none;
+        border: none;
+        height: 2em;
+        font-size: 16px;
+        margin-bottom: 1px;
+        border-bottom: 1px solid #fff;
+        border-radius: 0;
+        background-color: transparent;
+        &:focus {
+            border-bottom: 1px solid #fff;
+            background-color: transparent; 
+        }
+    }
+    ::-webkit-input-placeholder { color:#fff; }
+    ::-moz-placeholder { color:#fff; } /* firefox 19+ */
+    :-ms-input-placeholder { color:#fff; } /* ie */
+    input:-moz-placeholder { color:#fff; }
+}

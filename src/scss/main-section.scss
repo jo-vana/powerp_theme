@@ -1,0 +1,32 @@
+$primary-color: #00A9BD;
+$secondary-color: #58595B;
+.main-section {
+    position: relative;
+    top: -134px;
+    padding-top:250px;
+    background-color: $primary-color;
+    min-height: 900px;
+    z-index: 1;
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url("../background/Group 1000000795.svg");
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &--img {
+        display: block;
+        position: absolute;
+        top: 470px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 918px;
+    }
+}
