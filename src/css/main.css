@@ -94,6 +94,72 @@
   left: 5%;
   transition: 0.5s ease all;
 }
+@media screen and (max-width: 992px) {
+  .header.desktop {
+    display: none;
+  }
+  .header.mobile {
+    display: block;
+  }
+  .header.mobile.scrolled .navbar {
+    background-color: #fff;
+  }
+  .header.mobile.scrolled .mobile-logo {
+    display: none;
+  }
+  .header.mobile.scrolled .mobile-dark-logo {
+    display: block;
+  }
+  .header.mobile.scrolled .burger-menu .burger-strip div {
+    background: #00A9BD;
+  }
+  .header.mobile .mobile-logo,
+.header.mobile .mobile-dark-logo {
+    max-width: 80px;
+  }
+  .header.mobile .mobile-logo {
+    display: block;
+  }
+  .header.mobile .mobile-dark-logo {
+    display: none;
+  }
+  .header.mobile .burger-menu {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+  }
+  .header.mobile .burger-menu:focus {
+    border: none;
+  }
+  .header.mobile .burger-menu:focus-visible {
+    border: none;
+  }
+  .header.mobile .burger-menu .burger-strip div {
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    margin: 10px;
+    width: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header.mobile {
+    display: none;
+  }
+}
+.header .offcanvas-body {
+  flex-grow: 0;
+  background-color: #00A9BD;
+}
+.header .offcanvas-body.bottom {
+  background-color: #1E7784;
+}
+.header .offcanvas-body.bottom p {
+  color: #CBCFD4;
+  text-align: center;
+  font-size: 14px;
+}
 
 .logo {
   max-width: 198px;
@@ -367,10 +433,13 @@ footer .footer-bottom span {
   border-bottom: 1px solid #fff;
   border-radius: 0;
   background-color: transparent;
+  caret-color: #fff;
+  color: #fff;
 }
 .contact-form input:focus, .contact-form textarea:focus {
   border-bottom: 1px solid #fff;
   background-color: transparent;
+  color: #fff;
 }
 .contact-form ::-webkit-input-placeholder {
   color: #fff;
@@ -384,7 +453,31 @@ footer .footer-bottom span {
 .contact-form input:-moz-placeholder {
   color: #fff;
 }
+.contact-form .text-modified {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .contact-form {
+    margin-top: 30px;
+  }
+}
 
+.btn-send {
+  color: #fff;
+  background-color: #00A9BD;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 25px;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-box, .form-box, .footer-text-box {
+    width: 100%;
+    justify-content: center !important;
+  }
+}
 body {
   font-family: "Manrope", sans-serif;
   margin: 0 auto;
@@ -400,6 +493,50 @@ h1 {
   font-weight: 800;
   color: #fff;
   text-align: center;
+}
+
+#bck-tt-button {
+  display: inline-block;
+  background-color: #00A9BD;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none !important;
+}
+#bck-tt-button::after {
+  content: "\f106";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none !important;
+}
+#bck-tt-button:hover {
+  cursor: pointer;
+  background-color: #333;
+  text-decoration: none;
+}
+#bck-tt-button:active {
+  background-color: #00A9BD;
+  text-decoration: none;
+}
+#bck-tt-button:focus {
+  text-decoration: none;
+}
+#bck-tt-button.show {
+  opacity: 1;
+  visibility: visible;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

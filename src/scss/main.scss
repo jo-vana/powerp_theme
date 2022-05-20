@@ -4,6 +4,7 @@
 @import "map-section.scss";
 @import "footer.scss";
 $primary-font : 'Manrope', sans-serif;
+$primary-color: #00A9BD;
 body {
   font-family: $primary-font;
   margin: 0 auto;
@@ -17,4 +18,48 @@ h1 {
   font-weight: 800;
   color: #fff;
   text-align: center;
+}
+// Back to top button
+#bck-tt-button {
+  display: inline-block;
+  background-color: $primary-color;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none!important;
+  &::after {
+    content: "\f106";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+    text-decoration: none!important;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #333;
+    text-decoration: none;
+  }
+  &:active {
+    background-color: $primary-color;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    text-decoration: none;
+  }
 }

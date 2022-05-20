@@ -1,4 +1,4 @@
-//All your JS code goes here
+//Fix header on scroll-desktop
 jQuery(function() {
     var header = $(".header");
   
@@ -11,4 +11,19 @@ jQuery(function() {
         }
     });
   
+});
+// Back to top button
+var btn = jQuery('#bck-tt-button');
+
+jQuery(window).scroll(function() {
+  if (jQuery(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  jQuery('html, body').animate({scrollTop:0}, '300');
 });

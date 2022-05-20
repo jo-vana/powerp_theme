@@ -116,6 +116,78 @@ $primary-color: #00A9BD;
             }
         }
     }
+    @media screen and(max-width: 992px) {
+        &.desktop {
+            display: none;
+        }
+        &.mobile {
+            display: block;
+            &.scrolled {
+                .navbar {
+                    background-color: #fff;
+                }
+                .mobile-logo {
+                    display: none;
+                }
+                .mobile-dark-logo {
+                    display: block;
+                }
+                .burger-menu {
+                    .burger-strip div {
+                        background: $primary-color;
+                    }
+                }
+            }
+            .mobile-logo,
+            .mobile-dark-logo {
+                max-width: 80px;
+            }
+            .mobile-logo {
+                display: block;
+            }
+            .mobile-dark-logo {
+                display: none;
+            }
+            .burger-menu {
+                border: none;
+                border-radius: 0;
+                outline: none;
+                background-color: transparent;
+                &:focus {
+                    border: none;
+                }
+                &:focus-visible {
+                    border: none;
+                }
+                .burger-strip div {
+                    height: 3px;
+                    border-radius: 2px;
+                    background: #fff;
+                    margin: 10px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+    // Mobile header syles
+    @media screen and(min-width: 992px) {
+        &.mobile {
+            display: none;
+    
+        }
+    }
+    .offcanvas-body {
+        flex-grow: 0;
+        background-color: $primary-color;
+        &.bottom {
+            background-color: #1E7784;
+            p {
+                color: #CBCFD4;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
 }
 .logo {
     max-width: 198px;
