@@ -23,6 +23,13 @@ $light-secondary-color: #787A7D;
         line-height: 1.8;
         font-weight: 400;
         text-align: center;
+        display: block;
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    @media screen and(max-width: 992px) {
+        background-color: $primary-color;
+        min-height: 380px;
     }
 }
 .arrow {
@@ -34,6 +41,10 @@ $light-secondary-color: #787A7D;
     animation: bounce 0.6s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    @media screen and(max-width: 992px) {
+        max-width: 50px;
+        right: 5%;
+    }
 }
 @keyframes bounce {
     from { transform: translate3d(0, 0, 0);     }
@@ -47,6 +58,7 @@ $light-secondary-color: #787A7D;
     background-size: auto;
     background-repeat: no-repeat;
     padding-top: 200px;
+    padding-bottom: 100px;
     p {
         color: #fff;
         font-size: calc(22px + (40 - 22) * ((100vw - 420px) / (2600 - 420)));
@@ -88,7 +100,8 @@ $light-secondary-color: #787A7D;
     }
 }
 .about-us-section {
-    &.row {
+    display: block;
+    .row {
         margin: 0;
         div[class*=col-] {
             padding: 0;
@@ -105,7 +118,7 @@ $light-secondary-color: #787A7D;
             }
         }
     }
-    .eampty {
+    .empty {
         &.blue-box {
             background-color: $primary-color;
             position: relative;
@@ -182,6 +195,72 @@ $light-secondary-color: #787A7D;
             text-align: center;
             display: block;
             max-width: 620px;
+        }
+    }
+    @media screen and(max-width: 992px) {
+        display: none;
+    }
+    &--col {
+        display: none;
+        p {
+            color: #fff;
+            font-size: calc(18px + (24 - 18) * ((100vw - 420px) / (2600 - 420)));
+            line-height: 1.8;
+            font-weight: 400;
+            text-align: center;
+            display: block;
+            max-width: 620px;
+        }
+        .image-box {
+            display: block;
+            min-height: 400px;
+            background-image: url('../public/about-left.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+            &.blue {
+                background-color: $primary-color; 
+                &::after {
+                    content: url('../background/small.png');
+                    display: block;
+                    position: absolute;
+                    top: 75%;
+                    right: 10%;
+                    z-index: 10;
+                }
+            }
+            &.dark-gray {
+                background-color: $secondary-color;
+                &::after {
+                    content: url('../public/stamp.png');
+                    display: block;
+                    position: absolute;
+                    top: -20px;
+                    left: 10%;
+                    z-index: 10;
+                }
+            }
+            &.light-gray {
+                background-color: $light-secondary-color;
+                &::after {
+                    content: url('../public/stamp.png');
+                    display: block;
+                    position: absolute;
+                    top: -21px;
+                    right: 10%;
+                    z-index: 10;
+                }
+            }
+        }
+        @media screen and(max-width: 992px) {
+            display: block;
         }
     }
 }

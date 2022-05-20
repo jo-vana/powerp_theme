@@ -3,6 +3,9 @@
   z-index: 100;
   background-color: transparent;
 }
+.header.desktop > div.container {
+  padding: 20px 0;
+}
 .header .light-logo {
   display: block;
 }
@@ -16,11 +19,15 @@
   width: 100%;
   background-color: #fff;
 }
+.header.scrolled.desktop > div {
+  padding: 0;
+}
 .header.scrolled .light-logo {
   display: none;
 }
 .header.scrolled .logo {
   display: block;
+  max-width: 140px;
 }
 .header.scrolled .main-menu li a.nav-link {
   color: #00A9BD;
@@ -101,6 +108,9 @@
   .header.mobile {
     display: block;
   }
+  .header.mobile.scrolled .main-menu li a.nav-link {
+    color: #fff;
+  }
   .header.mobile.scrolled .navbar {
     background-color: #fff;
   }
@@ -170,7 +180,7 @@
   top: -134px;
   padding-top: 250px;
   background-color: #00A9BD;
-  min-height: 900px;
+  min-height: 800px;
   z-index: 1;
 }
 .main-section::after {
@@ -188,12 +198,16 @@
 }
 .main-section--img {
   display: block;
-  position: absolute;
-  top: 470px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 160px;
+  margin: 0 auto;
   width: 100%;
   max-width: 918px;
+}
+@media screen and (max-width: 992px) {
+  .main-section--img {
+    top: 50px;
+  }
 }
 
 .about-section--one {
@@ -219,6 +233,15 @@
   line-height: 1.8;
   font-weight: 400;
   text-align: center;
+  display: block;
+  max-width: 920px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .about-section--one {
+    background-color: #00A9BD;
+    min-height: 380px;
+  }
 }
 
 .arrow {
@@ -230,6 +253,12 @@
   animation: bounce 0.6s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+}
+@media screen and (max-width: 992px) {
+  .arrow {
+    max-width: 50px;
+    right: 5%;
+  }
 }
 
 @keyframes bounce {
@@ -248,6 +277,7 @@
   background-size: auto;
   background-repeat: no-repeat;
   padding-top: 200px;
+  padding-bottom: 100px;
 }
 .about-section--two p {
   color: #fff;
@@ -290,10 +320,13 @@
   margin-top: 50px;
 }
 
-.about-us-section.row {
+.about-us-section {
+  display: block;
+}
+.about-us-section .row {
   margin: 0;
 }
-.about-us-section.row div[class*=col-] {
+.about-us-section .row div[class*=col-] {
   padding: 0;
 }
 .about-us-section div[class*=col-] {
@@ -305,11 +338,11 @@
 .about-us-section div[class*=col-] .row .col {
   padding: 0;
 }
-.about-us-section .eampty.blue-box {
+.about-us-section .empty.blue-box {
   background-color: #00A9BD;
   position: relative;
 }
-.about-us-section .eampty.blue-box::after {
+.about-us-section .empty.blue-box::after {
   content: url("../background/Vector.svg");
   display: block;
   position: absolute;
@@ -317,11 +350,11 @@
   right: -20%;
   z-index: 10;
 }
-.about-us-section .eampty.gray-box {
+.about-us-section .empty.gray-box {
   background-color: #787A7D;
   position: relative;
 }
-.about-us-section .eampty.gray-box::after {
+.about-us-section .empty.gray-box::after {
   content: url("../background/Vector.svg");
   display: block;
   position: absolute;
@@ -381,6 +414,76 @@
   text-align: center;
   display: block;
   max-width: 620px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-section {
+    display: none;
+  }
+}
+.about-us-section--col {
+  display: none;
+}
+.about-us-section--col p {
+  color: #fff;
+  font-size: calc(18px + 6 * (100vw - 420px) / 2180);
+  line-height: 1.8;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  max-width: 620px;
+}
+.about-us-section--col .image-box {
+  display: block;
+  min-height: 400px;
+  background-image: url("../public/about-left.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.about-us-section--col .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.about-us-section--col .box.blue {
+  background-color: #00A9BD;
+}
+.about-us-section--col .box.blue::after {
+  content: url("../background/small.png");
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 10%;
+  z-index: 10;
+}
+.about-us-section--col .box.dark-gray {
+  background-color: #58595B;
+}
+.about-us-section--col .box.dark-gray::after {
+  content: url("../public/stamp.png");
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 10%;
+  z-index: 10;
+}
+.about-us-section--col .box.light-gray {
+  background-color: #787A7D;
+}
+.about-us-section--col .box.light-gray::after {
+  content: url("../public/stamp.png");
+  display: block;
+  position: absolute;
+  top: -21px;
+  right: 10%;
+  z-index: 10;
+}
+@media screen and (max-width: 992px) {
+  .about-us-section--col {
+    display: block;
+  }
 }
 
 .partners {

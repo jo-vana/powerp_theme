@@ -4,6 +4,9 @@ $primary-color: #00A9BD;
     position: relative;
     z-index: 100;
     background-color: transparent;
+    &.desktop >div.container {
+        padding: 20px 0;
+    }
     .light-logo {
         display: block;
     }
@@ -17,11 +20,15 @@ $primary-color: #00A9BD;
         left: 0;
         width: 100%; 
         background-color: #fff;
+        &.desktop >div {
+            padding: 0;
+        }
         .light-logo {
             display: none;
         }
         .logo {
             display: block;
+            max-width: 140px;
         }
         .main-menu {
             li {
@@ -123,6 +130,13 @@ $primary-color: #00A9BD;
         &.mobile {
             display: block;
             &.scrolled {
+                .main-menu {
+                    li {
+                        a.nav-link {
+                            color: #fff;
+                        }
+                    }
+                }
                 .navbar {
                     background-color: #fff;
                 }
