@@ -177,11 +177,14 @@
 
 .main-section {
   position: relative;
-  top: -134px;
-  padding-top: 250px;
-  background-color: #00A9BD;
+  top: -127px;
   min-height: 800px;
+  padding-top: 100px;
+  background-color: #00A9BD;
   z-index: 1;
+}
+.main-section h1 {
+  top: 100px;
 }
 .main-section::after {
   display: block;
@@ -204,9 +207,9 @@
   width: 100%;
   max-width: 918px;
 }
-@media screen and (max-width: 992px) {
-  .main-section--img {
-    top: 50px;
+@media screen and (max-width: 576px) {
+  .main-section {
+    min-height: 560px;
   }
 }
 

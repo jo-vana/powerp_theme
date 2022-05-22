@@ -2,11 +2,14 @@ $primary-color: #00A9BD;
 $secondary-color: #58595B;
 .main-section {
     position: relative;
-    top: -134px;
-    padding-top:250px;
-    background-color: $primary-color;
+    top: -127px;
     min-height: 800px;
+    padding-top: 100px;
+    background-color: $primary-color;
     z-index: 1;
+    h1 {
+        top: 100px;
+    }
     &::after {
         display: block;
         position: absolute;
@@ -27,8 +30,8 @@ $secondary-color: #58595B;
         margin: 0 auto;
         width: 100%;
         max-width: 918px;
-        @media screen and(max-width: 992px) {
-            top: 50px;
-        }
+    }
+    @media screen and(max-width: 576px) {
+        min-height: 560px;
     }
 }
