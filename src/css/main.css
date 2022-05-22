@@ -227,6 +227,13 @@
   transform: translateY(-50%);
   left: 10%;
 }
+@media screen and (max-width: 768px) {
+  .about-section--one::after {
+    content: url("../background/small.png");
+    bottom: -10%;
+    top: unset;
+  }
+}
 .about-section--one p {
   color: #fff;
   font-size: calc(18px + 6 * (100vw - 420px) / 2180);
@@ -243,10 +250,16 @@
     min-height: 380px;
   }
 }
+@media screen and (max-width: 768px) {
+  .about-section--one {
+    padding-bottom: 5px;
+  }
+}
 
 .arrow {
   display: block;
   position: absolute;
+  z-index: 100;
   bottom: 10%;
   right: 15%;
   cursor: pointer;
@@ -258,6 +271,11 @@
   .arrow {
     max-width: 50px;
     right: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .arrow {
+    bottom: -7%;
   }
 }
 
@@ -310,6 +328,11 @@
   font-weight: 500;
   text-align: center;
   padding-top: 80px;
+}
+@media screen and (max-width: 768px) {
+  .about-section--three .feature img {
+    max-width: 120px;
+  }
 }
 .about-section--three h2 {
   font-size: calc(30px + 20 * (100vw - 420px) / 2180);
@@ -517,6 +540,14 @@ footer .footer-bottom span {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
+}
+@media screen and (max-width: 576px) {
+  footer > div {
+    flex-direction: column-reverse;
+  }
+  footer .logo-box {
+    padding-top: 50px;
+  }
 }
 
 .contact-form {

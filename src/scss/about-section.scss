@@ -16,6 +16,11 @@ $light-secondary-color: #787A7D;
         top: 50%;
         transform: translateY(-50%);
         left: 10%;
+        @media screen and(max-width: 768px) {
+            content: url('../background/small.png');
+            bottom: -10%;
+            top: unset;
+        }
     }
     p {
         color: #fff;
@@ -31,10 +36,14 @@ $light-secondary-color: #787A7D;
         background-color: $primary-color;
         min-height: 380px;
     }
+    @media screen and(max-width: 768px) {
+        padding-bottom: 5px;
+    }
 }
 .arrow {
     display: block;
     position: absolute;
+    z-index: 100;
     bottom: 10%;
     right: 15%;
     cursor: pointer;
@@ -44,6 +53,9 @@ $light-secondary-color: #787A7D;
     @media screen and(max-width: 992px) {
         max-width: 50px;
         right: 5%;
+    }
+    @media screen and(max-width: 768px) {
+        bottom: -7%;
     }
 }
 @keyframes bounce {
@@ -88,6 +100,11 @@ $light-secondary-color: #787A7D;
             font-weight: 500;
             text-align: center;
             padding-top: 80px;
+        }
+        @media screen and(max-width: 768px) {
+            img {
+                max-width: 120px;
+            }
         }
     }
     h2 {

@@ -11,6 +11,14 @@ footer {
             font-weight: 400;
         }
     }
+    @media screen and(max-width: 576px) {
+        >div {
+            flex-direction: column-reverse;
+        }
+        .logo-box {
+            padding-top: 50px;
+        }
+    }
 }
 .contact-form {
     .row {
