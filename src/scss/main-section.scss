@@ -30,6 +30,9 @@ $secondary-color: #58595B;
         margin: 0 auto;
         width: 100%;
         max-width: 918px;
+        @media screen and(max-width: 576px) {
+            top: 130px;
+        }
     }
     @media screen and(max-width: 576px) {
         min-height: 560px;

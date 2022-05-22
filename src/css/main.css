@@ -208,6 +208,11 @@
   max-width: 918px;
 }
 @media screen and (max-width: 576px) {
+  .main-section--img {
+    top: 130px;
+  }
+}
+@media screen and (max-width: 576px) {
   .main-section {
     min-height: 560px;
   }
