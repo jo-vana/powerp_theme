@@ -20,7 +20,7 @@
   background-color: #fff;
 }
 .header.scrolled.desktop > div {
-  padding: 0;
+  padding: 10px 0;
 }
 .header.scrolled .light-logo {
   display: none;
@@ -123,6 +123,52 @@
   .header.mobile.scrolled .burger-menu .burger-strip div {
     background: #00A9BD;
   }
+  .header.mobile.scrolled .language-menu li {
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .header.mobile.scrolled .language-menu li a.nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 70px;
+  }
+  .header.mobile.scrolled .language-menu li a.nav-link.active {
+    text-decoration: none;
+    color: #fff;
+  }
+  .header.mobile.scrolled .language-menu li a.nav-link.active::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 30%;
+    background-color: #fff;
+    transition: 0.4s ease-out all 0.1s;
+  }
+  .header.mobile.scrolled .language-menu li a.nav-link.active:hover::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+  }
+  .header.mobile.scrolled .language-menu li a.nav-link::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    height: 2px !important;
+    width: 0;
+    left: 50%;
+    background-color: #fff;
+    transition: 0.4s ease-out all 0.1s;
+  }
+  .header.mobile.scrolled .language-menu li a.nav-link:hover::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+  }
   .header.mobile .mobile-logo,
 .header.mobile .mobile-dark-logo {
     max-width: 80px;
@@ -202,6 +248,7 @@
 .main-section--img {
   display: block;
   position: relative;
+  z-index: 500;
   top: 160px;
   margin: 0 auto;
   width: 100%;
@@ -267,7 +314,7 @@
 .arrow {
   display: block;
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   bottom: 10%;
   right: 15%;
   cursor: pointer;
@@ -313,9 +360,20 @@
   text-align: center;
 }
 
+.about {
+  position: relative;
+}
+.about h2 {
+  font-size: calc(30px + 20 * (100vw - 420px) / 2180);
+  line-height: 1.8;
+  font-weight: 700;
+  text-align: center;
+  color: #58595B;
+  margin-top: 0;
+}
+
 .about-section--three {
   position: relative;
-  top: -100px;
 }
 .about-section--three h3 {
   font-size: calc(28px + 16 * (100vw - 420px) / 2180);
@@ -341,14 +399,6 @@
   .about-section--three .feature img {
     max-width: 120px;
   }
-}
-.about-section--three h2 {
-  font-size: calc(30px + 20 * (100vw - 420px) / 2180);
-  line-height: 1.8;
-  font-weight: 700;
-  text-align: center;
-  color: #58595B;
-  margin-top: 50px;
 }
 
 .about-us-section {
@@ -418,7 +468,7 @@
   content: url("../public/stamp.png");
   display: block;
   position: absolute;
-  bottom: -30px;
+  bottom: -39px;
   left: -30px;
   z-index: 10;
 }
@@ -565,6 +615,11 @@ footer .footer-bottom span {
 .contact-form .row {
   padding-bottom: 10px;
 }
+@media screen and (max-width: 768px) {
+  .contact-form .row {
+    padding-bottom: 0;
+  }
+}
 .contact-form input, .contact-form textarea {
   display: block;
   outline: none;
@@ -679,6 +734,19 @@ h1 {
   opacity: 1;
   visibility: visible;
   text-decoration: none;
+}
+
+.anchor {
+  display: block;
+  height: 150px;
+  margin-top: -150px;
+  visibility: hidden;
+}
+@media screen and (max-width: 576px) {
+  .anchor {
+    height: 200px;
+    margin-top: -200px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -43,7 +43,7 @@ $light-secondary-color: #787A7D;
 .arrow {
     display: block;
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     bottom: 10%;
     right: 15%;
     cursor: pointer;
@@ -79,9 +79,20 @@ $light-secondary-color: #787A7D;
         text-align: center;
     }
 }
+.about {
+    position: relative;
+    h2 {
+        font-size: calc(30px + (50 - 30) * ((100vw - 420px) / (2600 - 420)));
+        line-height: 1.8;
+        font-weight: 700;
+        text-align: center;
+        color: $secondary-color;
+        margin-top: 0;
+    }
+}
 .about-section--three {
     position: relative;
-    top: -100px;
+    // top: -100px;
     h3 {
         font-size: calc(28px + (44 - 28) * ((100vw - 420px) / (2600 - 420)));
         line-height: 1.8;
@@ -106,14 +117,6 @@ $light-secondary-color: #787A7D;
                 max-width: 120px;
             }
         }
-    }
-    h2 {
-        font-size: calc(30px + (50 - 30) * ((100vw - 420px) / (2600 - 420)));
-        line-height: 1.8;
-        font-weight: 700;
-        text-align: center;
-        color: $secondary-color;
-        margin-top: 50px;
     }
 }
 .about-us-section {
@@ -184,7 +187,7 @@ $light-secondary-color: #787A7D;
                 content: url('../public/stamp.png');
                 display: block;
                 position: absolute;
-                bottom: -30px;
+                bottom: -39px;
                 left: -30px;
                 z-index: 10;
             }

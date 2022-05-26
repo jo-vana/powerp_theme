@@ -27,15 +27,14 @@
         </a>
   
         <ul class="nav col-12 col-md-auto mb-3 justify-content-center mb-md-0 main-menu">
-          <li><a href="#" class="nav-link px-3">Šta radimo</a></li>
-          <li><a href="#" class="nav-link px-3">O nama </a></li>
-          <li><a href="#" class="nav-link px-3">Šta nudimo</a></li>
-          <li><a href="#" class="nav-link px-3">Tim</a></li>
-          <li><a href="#" class="nav-link px-3">Kontakt</a></li>
+          <li><a href="#work" class="nav-link px-3">Šta radimo</a></li>
+          <li><a href="#about" class="nav-link px-3">O nama </a></li>
+          <li><a href="#offer" class="nav-link px-3">Šta nudimo</a></li>
+          <li><a href="#contact" class="nav-link px-3">Kontakt</a></li>
         </ul>
         <ul class="nav col-md-1 d-flex flex-wrap align-items-center justify-content-end language-menu">
-          <li><a href="#" class="nav-link px-2 active">sr</a></li>
-          <li><a href="#" class="nav-link px-2">en</a></li>
+          <!-- <li><a href="#" class="nav-link px-2 active">sr</a></li> -->
+          <!-- <li><a href="#" class="nav-link px-2">en</a></li> -->
         </div>
       </div>
     </header>
@@ -48,22 +47,22 @@
             <img src="./public/white-logo.svg" alt="logo" class="mobile-logo">
             <img src="./public/logo.svg" alt="logo" class="mobile-dark-logo">
           </a>
-          <button class="p-3 burger-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <button class="p-3 burger-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
             <div class="burger-strip">
               <div></div>
               <div></div>
               <div></div>
             </div>
           </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header justify-content-end">
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <!-- Language menu -->
               <ul class="nav col-md-1 d-flex flex-wrap align-items-center justify-content-end language-menu">
-                <li><a href="#" class="nav-link px-2 active">sr</a></li>
-                <li><a href="#" class="nav-link px-2">en</a></li>
+                <!-- <li><a href="#" class="nav-link px-2 active">sr</a></li> -->
+                <!-- <li><a href="#" class="nav-link px-2">en</a></li> -->
               </ul>
               <!-- Canvas Logo -->
               <div class="d-flex flex-wrap align-items-center justify-content-center">
@@ -71,11 +70,10 @@
               </div>
               <!-- Mobile menu -->
               <ul class="nav col-12 d-flex flex-column mb-3 mt-5 justify-content-center align-items-center main-menu">
-                <li><a href="#" class="nav-link px-3">Šta radimo</a></li>
-                <li><a href="#" class="nav-link px-3">O nama </a></li>
-                <li><a href="#" class="nav-link px-3">Šta nudimo</a></li>
-                <li><a href="#" class="nav-link px-3">Tim</a></li>
-                <li><a href="#" class="nav-link px-3">Kontakt</a></li>
+                <li><a href="#work" class="nav-link px-3">Šta radimo</a></li>
+                <li><a href="#about" class="nav-link px-3">O nama </a></li>
+                <li><a href="#offer" class="nav-link px-3">Šta nudimo</a></li>
+                <li><a href="#contact" class="nav-link px-3">Kontakt</a></li>
               </ul>
             </div>
             <div class="offcanvas-body bottom">
@@ -95,11 +93,12 @@
       <img src="./public/Group 4345.png" alt="PowERP" class="main-section--img">
       </div>
     </section>
+    <span id="work" class="anchor"></span>
     <section class="about-section--one">
       <div class="container">
         <p class="lead mb-4">PowERP je kompanija koja pruža usluge implementacije i održavanja ERP sistema, 
           kao i izrade aplikacija u srodnom Power Platform okruženju. PowERP je vaša produžena ruka u  planiranju, organizaciji i poboljšanju kvaliteta vaših poslovnih procesa u organizaciji. Mi stvaramo i dizajniramo sistem koji je upotrebljiv u svakoj industriji.</p>
-        <a href="#"><img src="./public/arrow.png" alt="arrow" class="arrow"></a>
+        <a href="#"><img src="./public/arrow.png" alt="arrow" class="arrow" style="pointer-events: none;"></a>
       </div>
     </section>
     <section class="about-section--two">
@@ -111,6 +110,7 @@
         </div>
       </div>
     </section>
+    <span id="offer" class="anchor"></span>
     <section class="about-section--three">
       <div class="container">
         <div class="col-lg-10 mx-auto">
@@ -132,9 +132,12 @@
                 <p>Sistemska povezanost sa svim svojim<br> organizacionim jedinicama i zaposlenima</p>
               </div>
             </div>
-            <h2>O nama</h2>
         </div>
       </div>
+    </section>
+    <span id="about" class="anchor"></span>
+    <section class="about">
+      <h2>O nama</h2>
     </section>
     <section class="about-us-section">
       <div class="row">
@@ -212,6 +215,7 @@
         </div>
       </div>
     </section>
+    <span id="contact" class="anchor"></span>
     <section class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.509224341921!2d20.437159115959226!3d44.79080987909873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a701fa4b3a2b9%3A0x9ec9c8d09d52b595!2sVladete%20Kova%C4%8Devi%C4%87a%206%2C%20Beograd!5e0!3m2!1sen!2srs!4v1652967653099!5m2!1sen!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
     </section>

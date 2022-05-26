@@ -63,3 +63,13 @@ h1 {
     text-decoration: none;
   }
 }
+.anchor {
+  display: block;
+  height: 150px;
+  margin-top: -150px;
+  visibility: hidden;
+  @media screen and(max-width: 576px) {
+    height: 200px;
+    margin-top: -200px;
+  }
+}

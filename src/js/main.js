@@ -47,3 +47,12 @@ jQuery('.owl-carousel').owlCarousel({
       }
   }
 })
+jQuery(".navbar .nav a").click(function(){
+  jQuery('.offcanvas').removeClass('show');
+  jQuery('.offcanvas-backdrop').removeClass('show');
+  jQuery('.offcanvas-backdrop').css('display', 'none');
+  jQuery('.offcanvas-end').removeClass('show');
+  jQuery('.offcanvas-end').removeClass('hiding');
+  jQuery('body').css('overflow', 'initial').css('padding-right','0');
+
+});
